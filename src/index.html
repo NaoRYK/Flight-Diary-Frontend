@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flight Diary</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body class="bg-gradient-to-br from-sky-100 via-sky-300 to-blue-400 w-screen h-screen">
+    <header class="flex align-center justify-center">
+        <h1 class="border border-2 rounded-lg p-4 m-4 bg-white/20 text-blue-600 mt-8 text-xl font-bold">My Flight Diary</h1>
+    </header>
+    <main class="flex flex-col align-center items-center">
+        
+        <section class=" w-80 bg-white/40 rounded-lg p-4">
+            
+            <div class="main-title-container m-2 text-lg font-semibold text-blue-500">
+                <h2>Write an entry for the diary</h2>
+            </div>
+            <div class="form-container">
+                <form class=" flex flex-col" action="">
+                    <label   class="font-semibold text-blue-500 mb-1 mt-1"  for="date-input">Date</label>
+                    <input type="date" name="" id="date-input">
+                    <label   class="font-semibold text-blue-500 mb-1 mt-1" for="weather-input">Weather</label>
+                    <select name="" id="weather-input">
+                        <option value="sunny">Sunny</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="windy">Windy</option>
+                        <option value="stormy">Stormy</option>
+                        <option value="clear">Clear</option>
+                    </select>
+                    <label   class="font-semibold text-blue-500 mb-1 mt-1" for="visibility-input">Visibility</label>
+                    <select name="" id="visibility">
+                        <option value="excellent">Excellent</option>
+                        <option value="great">Great</option>
+                        <option value="good">Good</option>
+                        <option value="ok">Ok</option>
+                        <option value="poor">Poor</option>
+                        <option value="bad">Bad</option>
+                        <option value="so bad">So bad</option>
+                        <option value="zero">Zero</option>
+                    </select>
+                    <label   class="font-semibold text-blue-500 mb-1 mt-1" for="comment-input">Comment</label>
+                    <textarea class="border-lg text-blue-500" name="" id="comment-input" cols="30" rows="8"></textarea>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
