@@ -40,6 +40,7 @@ function toggleEntriesSection(){
 
         entriesSection.classList.remove("hidden");
         uploadSection.classList.add("hidden");
+        entriesContainer.innerHTML =""
         fetchingEntries("https://flight-diary.vercel.app/api/diaries/");
 }
 
@@ -47,8 +48,9 @@ const fetchingEntries = async (url) => {
     try {
         const res = await fetch(url, { mode: 'cors' });
         const entries = await res.json();
-        console.log(entries);
 
+
+        entries.sort((a, b) => a.id - b.id);
         entries.forEach(entry => {
 
             entriesContainer.innerHTML += `
@@ -83,8 +85,6 @@ const fetchingEntries = async (url) => {
 
 
 const postEntry = async (url,{date,weather,comment,visibility})=>{
-
-    console.log(date,weather,comment,visibility);
    try {
     const res = await fetch(url,{
         method:'POST',
