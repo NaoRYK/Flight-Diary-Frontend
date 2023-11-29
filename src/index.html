@@ -6,15 +6,25 @@
     <title>My Flight Diary</title>
       <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/a6672c6b64.js" crossorigin="anonymous"></script>
+    
+
 
 </head>
 <body class="bg-gradient-to-br from-sky-100 via-sky-300 to-blue-400 w-screen h-screen flex align-center items-center justify-center flex-col">
     <header class="flex align-center justify-center">
+        <div class="p-4 my-5">
+            <i class="fa-solid fa-file-arrow-up upload-entry-button text-4xl cursor-pointer " style="color: rgb(37 99 235)"></i>
+        </div>
         <h1 class="border border-2 rounded-lg p-4 m-4 bg-white/20 text-blue-600 mt-8 text-xl font-bold">My Flight Diary</h1>
+
+        <div class="p-4 my-5">
+            <i class="fa-solid fa-book entries-button text-4xl cursor-pointer" style="color: rgb(37 99 235);"></i>
+        </div>
     </header>
     <main class="flex flex-col align-center items-center justify-center ">
         
-        <section class="upload-entry w-80 bg-white/40 rounded-lg p-4 hidden">
+        <section class="upload-entry w-80 bg-white/40 rounded-lg p-4 hidden ">
             
             <div class="main-title-container m-2 text-lg font-semibold text-blue-500">
                 <h2>Write an entry for the diary</h2>
@@ -52,50 +62,30 @@
 
             </div>
         </section>
-        <section class="entries h-96  w-3/6 bg-white/40 rounded-lg grid gap-4 p-4 overflow-y-hidden">
+        <section class="entries-section h-96  w-3/6 bg-white/40 rounded-lg grid gap-4 p-4 overflow-y-hidden hidden">
             <div class="main-title-container m-2 text-lg font-semibold text-blue-500">
                 <h2>This are all the diary entries</h2>
             </div >
 
-            <div class="entries-container h-full overflow-y-scroll grid gap-y-8">
+            <div class="entries-container h-full overflow-y-scroll grid gap-y-8 p-4">
+
 
                 <div class="entry bg-blue-300/30 grid grid-rows-3 text-xl font-semibold gap-y-4 items-center text-center border-2 text-blue-800 rounded-lg border-blue-300 ">
                     <div class="grid grid-cols-2 border-b-2 h-full rounded-md items-center  border-blue-300">
-                        <p class="entry-id  ">#1</p>
-                        <p class="entry-date ">22-05-2002</p>
+                        <p class="text-lg">ID:</p>
+                        <p class="text-lg">Date:</p>
+                        <p class="entry-id   font-light ">#1</p>
+                        <p class="entry-date  font-light ">22-05-2002</p>
                     </div>
                     <div class="grid grid-cols-2 border-b-2 h-full rounded-md items-center border-blue-300">
-                        <p class="entry-weather">Rainy</p>
-                        <p class="entry-visibility">Zero</p>
+                        <p class="text-lg">Weather: </p>
+                        <p class="text-lg row-2">Visibility:</p>
+                        <p class="entry-weather  font-light ">Rainy</p>
+                        <p class="entry-visibility  font-light ">Zero</p>
                     </div>
-                    <div>
-                        <p class="entry-comment col-span-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum officia ipsum ducimus recusandae atque non, unde id mollitia consqueuntur!</p>
-                    </div>
-                </div>
-                <div class="entry bg-blue-300/30 grid grid-rows-3 text-xl font-semibold gap-y-4 items-center text-center border-2 text-blue-800 rounded-lg border-blue-300 ">
-                    <div class="grid grid-cols-2 border-b-2 h-full rounded-md items-center  border-blue-300">
-                        <p class="entry-id  ">#1</p>
-                        <p class="entry-date ">22-05-2002</p>
-                    </div>
-                    <div class="grid grid-cols-2 border-b-2 h-full rounded-md items-center border-blue-300">
-                        <p class="entry-weather">Rainy</p>
-                        <p class="entry-visibility">Zero</p>
-                    </div>
-                    <div>
-                        <p class="entry-comment col-span-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum officia ipsum ducimus recusandae atque non, unde id mollitia consqueuntur!</p>
-                    </div>
-                </div>
-                <div class="entry bg-blue-300/30 grid grid-rows-3 text-xl font-semibold gap-y-4 items-center text-center border-2 text-blue-800 rounded-lg border-blue-300 ">
-                    <div class="grid grid-cols-2 border-b-2 h-full rounded-md items-center  border-blue-300">
-                        <p class="entry-id  ">#1</p>
-                        <p class="entry-date ">22-05-2002</p>
-                    </div>
-                    <div class="grid grid-cols-2 border-b-2 h-full rounded-md items-center border-blue-300">
-                        <p class="entry-weather">Rainy</p>
-                        <p class="entry-visibility">Zero</p>
-                    </div>
-                    <div>
-                        <p class="entry-comment col-span-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum officia ipsum ducimus recusandae atque non, unde id mollitia consqueuntur!</p>
+                    <div class="p-1">
+                        <p class="text-lg">Comment:</p>
+                        <p class="entry-comment col-span-2 font-light ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum officia ipsum ducimus recusandae atque non, unde id mollitia consqueuntur!</p>
                     </div>
                 </div>
             </div>
@@ -107,5 +97,7 @@
             
         </section>
     </main>
+
+    <script src="./scripts/index.js" type="module"></script>
 </body>
 </html>
