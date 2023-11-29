@@ -22,7 +22,7 @@ function toggleEntriesSection(){
 
 const fetchingEntries = async (url) => {
     try {
-        const res = await fetch(url, { mode: 'no-cors' });
+        const res = await fetch(url, { mode: 'cors' });
         const entries = await res.json();
         console.log(entries);
     } catch (error) {
